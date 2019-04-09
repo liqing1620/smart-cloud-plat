@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: center
+
+eureka:
+  instance:
+    hostname: ${spring.application.name}
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka/
+    healthcheck:
+      enabled: true
+    fetch-registry: false
+    register-with-eureka: false
